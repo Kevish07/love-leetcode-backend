@@ -25,7 +25,7 @@ const register = async (req, res) => {
 
     let userImage = image;
     if (!userImage) {
-      userImage = name.charAt(0).toUpperCase();
+      userImage = null;
     }
 
     const user = await db.user.create({
