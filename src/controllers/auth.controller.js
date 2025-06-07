@@ -46,7 +46,6 @@ const register = async (req, res) => {
       sameSite: "none",
       secure: true,
       maxAge: 1000 * 60 * 60 * 24 * 7,
-      domain: ".loveleetcode.in",
     };
     res.cookie("jwt", token, cookieOptions);
 
@@ -98,7 +97,6 @@ const login = async (req, res) => {
       sameSite: "none",
       secure: true,
       maxAge: 1000 * 60 * 60 * 24 * 7,
-      domain: ".loveleetcode.in",
     };
     res.cookie("jwt", token, cookieOptions);
 
@@ -127,7 +125,6 @@ const logout = async (req, res) => {
       sameSite: "none",
       secure: true,
       maxAge: 1000 * 60 * 60 * 24 * 7,
-      domain: ".loveleetcode.in",
     };
     res.clearCookie("jwt",cookieOptions);
 
