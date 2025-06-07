@@ -23,7 +23,7 @@ const app = express();
 // }))
 
 const corsOptions = {
-  origin: "https://www.loveleetcode.in", // replace with your frontend origin
+  origin: "https://loveleetcode.in", // replace with your frontend origin
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
