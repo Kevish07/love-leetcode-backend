@@ -46,6 +46,7 @@ const register = async (req, res) => {
       sameSite: "none",
       secure: process.env.NODE_ENV !== "development",
       maxAge: 1000 * 60 * 60 * 24 * 7,
+      domain: "https://www.loveleetcode.in",
     };
     res.cookie("jwt", token, cookieOptions);
 
@@ -95,8 +96,9 @@ const login = async (req, res) => {
     const cookieOptions = {
       httpOnly: true,
       sameSite: "none",
-      secure: process.env.NODE_ENV !== "development",
+      secure: true,
       maxAge: 1000 * 60 * 60 * 24 * 7,
+      domain: "https://www.loveleetcode.in",
     };
     res.cookie("jwt", token, cookieOptions);
 
@@ -125,6 +127,7 @@ const logout = async (req, res) => {
       sameSite: "none",
       secure: process.env.NODE_ENV !== "development",
       maxAge: 1000 * 60 * 60 * 24 * 7,
+      domain: "https://www.loveleetcode.in",
     };
     res.clearCookie("jwt",cookieOptions);
 
